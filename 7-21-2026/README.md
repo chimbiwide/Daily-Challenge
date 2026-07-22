@@ -36,3 +36,11 @@ s.get_min()   # -> 3
 ### Bonus
 
 make it memory-lighter by storing only the delta between each pushed value and the running min, so the auxiliary stack only grows on a new minimum.
+
+---
+
+### Notes
+
+1. I originally used `.insert(0,x)` to try to keep the newest items at the start of the list (like an actual stack), but `insert()` is O(n) which breaks the contraints of O(1)
+2. I really struggled with the implementation of `get_min()`, I originally did kept the min stack to be max 2 items, which means I would loose everything if BOTH elements were popped from the list. So I moved to a infinite list that just appends when the input is smaller than the last element of the min stack
+3. forgot that you can access python lists with `list[-1]`

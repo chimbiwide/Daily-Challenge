@@ -24,4 +24,6 @@ After reversing, print the array using a pointer-arithmetic loop only.
 
 ---
 
-Notes: I did not know C array pointers auto-increments so I originally did `i+=sizeof(int)`
+### Notes 
+
+I did not know C array pointers auto-increments so I originally did `i+=sizeof(int)`
