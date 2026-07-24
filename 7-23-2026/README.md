@@ -51,3 +51,5 @@ Add void freeQueue(Queue *q) that frees every remaining node, then rebuild and d
 
 1. I seems to have forgotten that when passing in pointers as the parameter (`initQueue`), it is already iniialized on the heap and I do not need to malloc it again. So I made this fatal mistake and started at the valgrind error for 20 minutes wondering what I did wrong, thinking the issue came from my initialization of the `front` and `rear` pointers.
 2. I have successfully encountered a dangling pointer in `dequeue`, so when I freed `q->front`, I never thought about the case about what if the node is the only element, which would make `q->rear` a dangling pointer since it is now pointing at an already freed memory.
+
+**I think this is a really good exercise for me and I got more practice with pointers in C, this level of control over memory is exactly why I like this language**
